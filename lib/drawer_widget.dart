@@ -20,7 +20,7 @@ class DrawerWidget extends StatelessWidget {
             decoration: BoxDecoration(
               color: Color.fromARGB(255, 219, 219, 219),
             ),
-            child: Text("Drawer header"),
+            child: Text("Welcome to ABC plc."),
           ),
           ListTile(
             title: Text('Home page'),
@@ -41,7 +41,7 @@ class DrawerWidget extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('List view'),
+            title: Text('Food List'),
             onTap: () {
               // Action when Item 2 is tapped
               Navigator.push(context, MaterialPageRoute(builder: (context) {
