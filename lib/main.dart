@@ -105,23 +105,31 @@ class RichTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: "hello",
-        style: TextStyle(
-          fontSize: 24,
-          color: Colors.black,
-        ),
-        children: <TextSpan>[
-          TextSpan(
-            text: "bold letter",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.red,
-              fontSize: 30,
-            ),
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: RichText(
+        text: TextSpan(
+          text: "BEST ",
+          style: TextStyle(
+            fontSize: 24,
+            color: Colors.black,
           ),
-        ],
+          children: <TextSpan>[
+            TextSpan(
+              text: "BURGER ",
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 24,
+              ),
+            ),
+            TextSpan(
+              text: "IN THE TOWN!",
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
