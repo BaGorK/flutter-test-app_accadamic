@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/drawer_widget.dart';
 import 'package:flutterproject/form_screen.dart';
+import 'package:flutterproject/icons_widget.dart';
+import 'package:flutterproject/rich_text_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
               return FormScreen();
             }));
           },
-          child: Text("Login>>"),
+          child: Icon(Icons.login),
         ),
         drawer: DrawerWidget(),
         body: SingleChildScrollView(
@@ -95,73 +97,6 @@ class NetworkImage extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class RichTextWidget extends StatelessWidget {
-  const RichTextWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15.0),
-      child: RichText(
-        text: TextSpan(
-          text: "BEST ",
-          style: TextStyle(
-            fontSize: 24,
-            color: Colors.black,
-          ),
-          children: <TextSpan>[
-            TextSpan(
-              text: "BURGER ",
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 24,
-              ),
-            ),
-            TextSpan(
-              text: "IN THE TOWN!",
-              style: TextStyle(
-                fontSize: 24,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class IconsWidget extends StatelessWidget {
-  const IconsWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          Icons.favorite,
-          size: 50,
-          color: Colors.amber,
-        ),
-        Icon(
-          Icons.share,
-          size: 50,
-          color: Colors.amber,
-        ),
-        Icon(
-          Icons.add,
-          color: Colors.amber,
-          size: 50.0,
-        ),
-      ],
     );
   }
 }

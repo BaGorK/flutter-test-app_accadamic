@@ -20,7 +20,7 @@ class ListViewScreen extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text("<<"),
+          child: Icon(Icons.navigate_before),
         ),
         drawer: DrawerWidget(),
         body: ListViewPage(),
