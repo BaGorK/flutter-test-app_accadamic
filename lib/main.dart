@@ -31,15 +31,16 @@ class MyApp extends StatelessWidget {
         ),
         drawer: DrawerWidget(),
         body: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                RichTextWidget(),
-                NetworkImage(),
-                IconsWidget(),
-              ],
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              RichTextWidget(),
+              NetworkImage(),
+              SizedBox(
+                height: 50,
+              ),
+              IconsWidget(),
+            ],
           ),
         ),
       ),
@@ -148,17 +149,17 @@ class IconsWidget extends StatelessWidget {
         Icon(
           Icons.favorite,
           size: 50,
-          color: Colors.grey,
+          color: Colors.amber,
         ),
         Icon(
           Icons.share,
           size: 50,
-          color: const Color.fromARGB(255, 34, 25, 25),
+          color: Colors.amber,
         ),
         Icon(
-          Icons.audiotrack,
-          color: Colors.green,
-          size: 30.0,
+          Icons.add,
+          color: Colors.amber,
+          size: 50.0,
         ),
       ],
     );
