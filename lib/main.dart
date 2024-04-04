@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         body: SingleChildScrollView(
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 RichTextWidget(),
                 NetworkImage(),
@@ -54,54 +54,46 @@ class NetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return Center(
+      child: Container(
+        width: 400,
+        height: 300,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 3,
+                offset: Offset(0, 3),
+              ),
+            ]),
+        child: Column(
           children: [
             Image.network(
-              "https://images.unsplash.com/photo-1711998059898-67072ebd396a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
-              width: 200,
+              "https://images.unsplash.com/photo-1661529515567-dcb300f41da5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdCUyMGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D",
               height: 200,
             ),
-            Image.network(
-              "https://images.unsplash.com/photo-1711998059898-67072ebd396a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
-              width: 200,
-              height: 200,
+            Text(
+              "Hot Burger",
+              style: TextStyle(
+                fontSize: 23,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 4,
+            ),
+            Text(
+              "Taste Our Hot Burger",
+              style: TextStyle(
+                fontSize: 15,
+              ),
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Image.network(
-              "https://images.unsplash.com/photo-1711998059898-67072ebd396a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
-              width: 200,
-              height: 200,
-            ),
-            Image.network(
-              "https://images.unsplash.com/photo-1711998059898-67072ebd396a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
-              width: 200,
-              height: 200,
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Image.network(
-              "https://images.unsplash.com/photo-1711998059898-67072ebd396a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
-              width: 200,
-              height: 200,
-            ),
-            Image.network(
-              "https://images.unsplash.com/photo-1711998059898-67072ebd396a?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
-              width: 200,
-              height: 200,
-            ),
-          ],
-        ),
-      ],
+      ),
     );
   }
 }
