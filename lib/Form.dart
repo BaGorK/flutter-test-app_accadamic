@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, constant_identifier_names
 import 'package:flutter/material.dart';
+import 'package:flutterproject/main.dart';
 
 enum SingingCharacter { Male, Female }
 
@@ -11,7 +12,7 @@ class MyFormPage extends StatefulWidget {
 }
 
 class _MyFormPageState extends State<MyFormPage> {
-  bool _isChecked = false;
+  bool _isChecked = true;
   SingingCharacter? _character = SingingCharacter.Male;
 
   @override
@@ -60,7 +61,7 @@ class _MyFormPageState extends State<MyFormPage> {
                 });
               },
             ),
-            Text("Remeber this action"),
+            Text("Remeber this action for the future"),
           ],
         ),
         ListTile(
@@ -93,15 +94,16 @@ class _MyFormPageState extends State<MyFormPage> {
         ),
         ElevatedButton(
           onPressed: () {
-            // Add your onPressed functionality here
-            print('Button pressed');
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return MyApp();
+            }));
           },
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(
                 horizontal: 20, vertical: 15), // Button padding
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10), // Button border radius
-            ),
+            // shape: RoundedRectangleBorder(
+            //   borderRadius: BorderRadius.circular(10), // Button border radius
+            // ),
             textStyle: TextStyle(
               fontSize: 16, // Text size
               fontWeight: FontWeight.bold, // Text weight

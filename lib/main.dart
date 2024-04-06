@@ -7,7 +7,8 @@ import 'package:flutterproject/icons_widget.dart';
 import 'package:flutterproject/rich_text_widget.dart';
 
 void main() {
-  runApp(const MyApp());
+  // runApp(const MyApp());
+  runApp(const FormScreen());
 }
 
 class MyApp extends StatelessWidget {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -37,6 +39,14 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               RichTextWidget(),
+              NetworkImage(),
+              SizedBox(
+                height: 50,
+              ),
+              NetworkImage(),
+              SizedBox(
+                height: 50,
+              ),
               NetworkImage(),
               SizedBox(
                 height: 50,
